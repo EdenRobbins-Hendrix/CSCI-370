@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
+<<<<<<< HEAD
   productGUID: 90e61a0d80e9747c991643630fbdbbbe
+=======
+  productGUID: 3c1ed7088954c415a8be6fd0be2bdda1
+>>>>>>> origin/main
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -687,10 +691,17 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
+<<<<<<< HEAD
   cloudProjectId: f7420f9d-fbcd-4829-891a-8a707b5b20e2
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: SmallPond 2025-01-31_15-33-54
+=======
+  cloudProjectId: e03d2351-f717-4f24-929d-a4fd003bec63
+  framebufferDepthMemorylessMode: 0
+  qualitySettingsNames: []
+  projectName: SmallPond
+>>>>>>> origin/main
   organizationId: k_atej
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
