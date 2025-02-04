@@ -19,6 +19,19 @@ public class swim : MonoBehaviour
     }
 
     void Move(){
+        UnityEngine.Vector3 rot = transform.eulerAngles;
+        if (rot == new UnityEngine.Vector3(0,0,0)){
+            Debug.Log("Match! 0");
+        } 
+        if (rot == new UnityEngine.Vector3(0,0,90)){
+            Debug.Log("Match! 90");
+        }
+        if (rot == new UnityEngine.Vector3(0,0,180)){
+            Debug.Log("Match! 180");
+        }
+        if (rot == new UnityEngine.Vector3(0,0,270)){
+            Debug.Log("Match! 270");
+        }
         
         transform.Translate(new UnityEngine.Vector2(1, 0));
     }
