@@ -10,7 +10,6 @@ public class swim : MonoBehaviour
         InvokeRepeating("Move", 0.25f, 0.25f);   
     }
 
-    public float speed;
     // Update is called once per frame
     void Update()
     {
