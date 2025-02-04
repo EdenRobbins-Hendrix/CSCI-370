@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DampenFall : MonoBehaviour
@@ -13,10 +14,13 @@ public class DampenFall : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   if (food != null) {
         if (food.linearVelocityY + resistance < 0) {
             food.linearVelocityY += resistance * Time.fixedDeltaTime;
         }
-        
+        if (food.transform.position.y < -7) {
+            Destroy(food);
+        }    
+    }
     }
 }
