@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class SpawnPredator : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+   
+    public GameObject predator; // This should randomly set the rotation of the predator (as detailed in Swim.cs) as well as its location (offscreen on the side corresponding to its rotation)
+   
     void Start()
     {
         
