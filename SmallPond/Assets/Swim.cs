@@ -3,10 +3,13 @@ using UnityEngine;
 
 public class swim : MonoBehaviour
 {
+    public GameObject predator;
+    public int timer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        timer = 0;
         InvokeRepeating("Move", 0.25f, 0.25f);   
     }
 
@@ -18,6 +21,12 @@ public class swim : MonoBehaviour
     }
 
     void Move(){
-        transform.Translate(new UnityEngine.Vector2(0.5f, 0));
+        if (timer >= 20){
+            Destroy(predator);
+        }
+        else{
+            timer += 1;
+            transform.Translate(new UnityEngine.Vector2(1f, 0));
+        }
     }
 }
