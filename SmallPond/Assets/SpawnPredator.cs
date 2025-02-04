@@ -5,11 +5,12 @@ public class SpawnPredator : MonoBehaviour
 {
    
     public GameObject predator; // This should randomly set the rotation of the predator (as detailed in Swim.cs) as well as its location (offscreen on the side corresponding to its rotation)
-
+    public GameObject player;
     
     void Start()
     {
-        InvokeRepeating("Spawn", 0.5f, 1.0f); 
+        player = GameObject.Find("Player");
+        InvokeRepeating("Spawn", 0.5f, 0.75f); 
     }
 
     // Update is called once per frame
@@ -35,28 +36,51 @@ public class SpawnPredator : MonoBehaviour
         
     }
 
+    float GenerateXCoordinate() {
+        float initial = Random.Range(-9f, 9f);
+        if (initial - player.transform.position.x > 0.75 ||  initial - player.transform.position.x < -0.75) {
+            initial = Random.Range(-9f, 9f);
+            if (initial - player.transform.position.x > 7 || initial - player.transform.position.x < -7) {
+                initial = Random.Range(-2f, 2f);
+                initial = initial + player.transform.position.x;
+            }
+        }
+        return initial;
+    }
+
+    float GenerateYCoordinate() {
+        float initial = Random.Range(-5f, 5f);
+        if (initial - player.transform.position.y > 0.75 ||  initial - player.transform.position.y < -0.75) {
+            initial = Random.Range(-5f, 5f);
+            if (initial - player.transform.position.y > 4 || initial - player.transform.position.y < -4) {
+                initial = Random.Range(-2f, 2f);
+                initial = initial + player.transform.position.y;
+            }
+        }
+        return initial;
+    }
 
     // spawn predator in area just outside frame and move across camera area
     void SpawnA(){
-        Instantiate(predator, new Vector2(-10f, Random.Range(-5f, 5f)),
+        Instantiate(predator, new Vector2(-12f, GenerateYCoordinate()),
          Quaternion.Euler(new Vector3(0, 0, 0)));
         Debug.Log("Instantiating Predator A");
     }
 
     void SpawnB(){
-        Instantiate(predator, new Vector2(Random.Range(-9f, 9f), -7f),
+        Instantiate(predator, new Vector2(GenerateXCoordinate(), -10f),
          Quaternion.Euler(new Vector3(0, 0, 90)));
         Debug.Log("Instantiating Predator B");
     }
 
     void SpawnC(){
-        Instantiate(predator, new Vector2(10f, Random.Range(-5, 5f)),
+        Instantiate(predator, new Vector2(12f, GenerateYCoordinate()),
          Quaternion.Euler(new Vector3(0, 0, 180)));
         Debug.Log("Instantiating Predator C");
     }
 
     void SpawnD(){
-        Instantiate(predator, new Vector2(Random.Range(-9f, 9f), 7f),
+        Instantiate(predator, new Vector2(GenerateXCoordinate(), 10f),
          Quaternion.Euler(new Vector3(0, 0, 270)));
         Debug.Log("Instantiating Predator D");
     }
