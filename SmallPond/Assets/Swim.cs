@@ -33,4 +33,19 @@ public class swim : MonoBehaviour
             transform.Translate(new UnityEngine.Vector2(0.01f, 0));
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision){
+        GameObject otherObject = collision.gameObject;
+        if (otherObject.name == "Player"){
+            Debug.Log("Predator collided with: " + otherObject);
+        }
+        
+    }
+    void OnTriggerEnter2D(Collider2D collider) {
+		GameObject otherObject = collider.gameObject;
+		if (otherObject.name == "Player"){
+            Debug.Log("Predator triggered with: " + otherObject);
+        }
+    }
+
 }
