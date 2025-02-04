@@ -4,23 +4,21 @@ using UnityEngine;
 public class DampenFall : MonoBehaviour
 {
     private float resistance;
-    private Rigidbody2D food;
+    private float factor;
+    public Rigidbody2D food;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        resistance = 0.1f;
-        food = GetComponent<Rigidbody2D>();
-    }
+        factor = 1f;
+        resistance = factor;
+        }
 
     // Update is called once per frame
     void Update()
-    {   if (food != null) {
-        if (food.linearVelocityY + resistance < 0) {
-            food.linearVelocityY += resistance * Time.fixedDeltaTime;
-        }
-        if (food.transform.position.y < -7) {
-            Destroy(food);
-        }    
-    }
+    {   food.linearVelocityY *= resistance;
+        factor /= 1.0001f;
+        if (factor > 0.05f) {
+            resistance = factor;
+        } 
     }
 }
