@@ -37,14 +37,14 @@ public class swim : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         GameObject otherObject = collision.gameObject;
         if (otherObject.name == "Player"){
-            Debug.Log("Predator collided with: " + otherObject);
+            //Debug.Log("Predator collided with: " + otherObject);
         }
         
     }
     void OnTriggerEnter2D(Collider2D collider) {
 		GameObject otherObject = collider.gameObject;
 		if (otherObject.name == "Player"){
-            Debug.Log("Predator triggered with: " + otherObject);
+            //Debug.Log("Predator triggered with: " + otherObject);
         }
     }
 

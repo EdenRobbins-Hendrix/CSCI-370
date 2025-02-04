@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2470824122007170788}
   - component: {fileID: 2765102152607557075}
   - component: {fileID: 7828922734986987735}
-  - component: {fileID: 8410126083846210102}
+  - component: {fileID: -6955221582668231052}
   m_Layer: 0
   m_Name: Predator
   m_TagString: Untagged
@@ -131,8 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   predator: {fileID: 6237694072589080886}
   timer: 0
---- !u!58 &8410126083846210102
-CircleCollider2D:
+--- !u!61 &-6955221582668231052
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -166,4 +166,14 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8, y: 0.6}
+  m_EdgeRadius: 0
