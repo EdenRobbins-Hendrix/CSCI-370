@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9173539654943918062}
   - component: {fileID: 2470824122007170788}
   - component: {fileID: 2765102152607557075}
-  - component: {fileID: 4834357108601861550}
+  - component: {fileID: 7828922734986987735}
   m_Layer: 0
   m_Name: Predator
   m_TagString: Untagged
@@ -116,7 +116,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4834357108601861550
+--- !u!114 &7828922734986987735
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
