@@ -22,9 +22,13 @@ public class DecrementEnergy : MonoBehaviour
     public void Decrement(double distance) {
         Debug.Log("CALLED");
         float dist = (float)distance;
-        energy -= dist*0.25f;
+        energy -= dist;
 
         energyDisplay.SetText(energy.ToString());
         Debug.Log("Decrementing Energy");
+    }
+
+    public void Increment(){
+        energy += 10f;
     }
 }
