@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -6,10 +7,13 @@ using UnityEngine.UIElements;
 public class PlayerMove : MonoBehaviour
 {
     private Vector3 mousePosition;
+    public DecrementEnergy decrementenergy;
+    private float lastx;
+    private float lasty;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        decrementenergy = GameObject.FindWithTag("GameController").GetComponent<DecrementEnergy>();
     }
     // Update is called once per frame
     void Update()
@@ -20,6 +24,16 @@ public class PlayerMove : MonoBehaviour
         if (mousePosition.y > -4 || mousePosition.y < 4 || mousePosition.x > -9.25f || mousePosition.x < 9.25f) {
             transform.position = mousePosition;
         }
+        double distance = Math.Pow(mousePosition.y - lasty, 2) + Math.Pow(mousePosition.x - lastx, 2);
+        distance = Math.Sqrt(distance);
+        //Debug.Log("moved "+ distance);
+        lasty = mousePosition.y;
+        lastx = mousePosition.x;
+
+        decrementenergy.Decrement(distance);
+        
+        
+
     }
 
     void OnCollisionEnter2D(Collision2D collision){
