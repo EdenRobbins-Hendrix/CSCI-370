@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Despawn : MonoBehaviour
 {
-    public Rigidbody2D self;
+    public GameObject self;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -15,6 +15,7 @@ public class Despawn : MonoBehaviour
     {
         if (self != null){
             if (self.transform.position.y < -5.5) {
+                Debug.Log("Called");
                 Destroy(self);
             }
         }

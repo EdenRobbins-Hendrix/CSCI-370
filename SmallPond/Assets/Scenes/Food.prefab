@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a4c54c4337520742a83557b685adbda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  self: {fileID: 4344588865793044018}
+  self: {fileID: 4714370322862717893}
 --- !u!58 &6411046754167090175
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -195,3 +195,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food: {fileID: 4714370322862717893}
   incrementScore: {fileID: 0}
+  decrementenergy: {fileID: 0}
