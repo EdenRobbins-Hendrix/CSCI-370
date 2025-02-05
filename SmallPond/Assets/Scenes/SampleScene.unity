@@ -843,6 +843,7 @@ GameObject:
   - component: {fileID: 1300459582}
   - component: {fileID: 1300459583}
   - component: {fileID: 1300459584}
+  - component: {fileID: 1300459585}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -907,6 +908,21 @@ MonoBehaviour:
   score: 0
   scoreDisplay: {fileID: 364296747}
   player: {fileID: 0}
+--- !u!114 &1300459585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300459580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68a088c31f04a493da9ac2171bfc1069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energy: 0
+  energyDisplay: {fileID: 596074402}
+  player: {fileID: 1982350394}
 --- !u!1 &1517507752
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,6 +1156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5e1515bd8a5ff4aadd20a3aeded8cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  decrementenergy: {fileID: 0}
 --- !u!58 &1982350399
 CircleCollider2D:
   m_ObjectHideFlags: 0
