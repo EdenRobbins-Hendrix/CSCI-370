@@ -11,7 +11,7 @@ public class DecrementEnergy : MonoBehaviour
     void Start()
     {
         energy = 60f;
-        energyDisplay.SetText(energy.ToString());
+        energyDisplay.SetText("XXXXXX");
     }
 
     // Update is called once per frame
@@ -20,15 +20,41 @@ public class DecrementEnergy : MonoBehaviour
     }
 
     public void Decrement(double distance) {
-        Debug.Log("CALLED");
+        //Debug.Log("CALLED");
         float dist = (float)distance;
         energy -= dist;
 
-        energyDisplay.SetText(energy.ToString());
-        Debug.Log("Decrementing Energy");
+        energyDisplay.SetText(getText());
+        //Debug.Log("Decrementing Energy");
     }
 
     public void Increment(){
         energy += 10f;
     }
+
+    private string getText(){
+        string text = "";
+        if (energy / 10 >= 5.0f){
+            text = "XXXXXX";
+        }
+        else if (energy / 10 >= 4.0f){
+            text = "XXXXX";
+        }
+        else if (energy / 10 >= 3.0f){
+            text = "XXXX";
+        }
+        else if (energy / 10 >= 2.0f){
+            text = "XXX";
+        }
+        else if (energy / 10 >= 1.0f){
+            text = "XX";
+        }
+        else if (energy / 10 >= 0.0f){
+            text = "X";
+        }
+        return text;
+
+    }
+
+
 }
