@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Despawn : MonoBehaviour
@@ -12,8 +13,10 @@ public class Despawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (self.transform.position.y < -5) {
-            Destroy(self);
+        if (self != null){
+            if (self.transform.position.y < -5.5) {
+                Destroy(self);
+            }
         }
     }
 }

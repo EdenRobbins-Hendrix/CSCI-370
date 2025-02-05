@@ -17,15 +17,17 @@ public class PlayerMove : MonoBehaviour
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         mousePosition.z = 0;
-        transform.position = mousePosition;
+        if (mousePosition.y > -4 || mousePosition.y < 4 || mousePosition.x > -9.25f || mousePosition.x < 9.25f) {
+            transform.position = mousePosition;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision){
         GameObject otherObject = collision.gameObject;
-        Debug.Log("Player collided with: " + otherObject);
+        //Debug.Log("Player collided with: " + otherObject);
     }
     void OnTriggerEnter2D(Collider2D collider) {
 		GameObject otherObject = collider.gameObject;
-		Debug.Log("Player triggered with: " + otherObject);
+		//Debug.Log("Player triggered with: " + otherObject);
     }
 }

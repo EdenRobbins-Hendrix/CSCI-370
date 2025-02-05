@@ -6,7 +6,7 @@ public class SpawnFood : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InvokeRepeating("Spawn", 1f, 7.5f);
+        InvokeRepeating("Spawn", 1f, 8f);
     }
 
     // Update is called once per frame

@@ -15,10 +15,12 @@ public class DampenFall : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {   food.linearVelocityY *= resistance;
+    {   
+        if (food != null){
+        food.linearVelocityY *= resistance;
         factor /= 1.0001f;
         if (factor > 0.05f) {
             resistance = factor;
         } 
-    }
+    }}
 }
