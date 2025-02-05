@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,11 +7,13 @@ public class SpawnPredator : MonoBehaviour
    
     public GameObject predator; // This should randomly set the rotation of the predator (as detailed in Swim.cs) as well as its location (offscreen on the side corresponding to its rotation)
     public GameObject player;
+    public Boolean active;
     
     void Start()
     {
         player = GameObject.Find("Player");
-        InvokeRepeating("Spawn", 0.5f, 0.55f); 
+        InvokeRepeating("Spawn", 0.5f, 0.55f);
+        active = true; 
     }
 
     // Update is called once per frame
@@ -20,7 +23,8 @@ public class SpawnPredator : MonoBehaviour
 
     // randomly select which axis to spawn a predator
     void Spawn() {
-        var index = Random.Range(0, 4);
+        if (active){
+        var index = UnityEngine.Random.Range(0, 4);
         if (index == 0){
             SpawnA();
         }
@@ -33,15 +37,18 @@ public class SpawnPredator : MonoBehaviour
         else{
             SpawnD();
         }
-        
+        }
+        else {
+            CancelInvoke("Spawn");
+        }
     }
 
     float GenerateXCoordinate() {
-        float initial = Random.Range(-9f, 9f);
+        float initial = UnityEngine.Random.Range(-9f, 9f);
         if (initial - player.transform.position.x > 0.75 ||  initial - player.transform.position.x < -0.75) {
-            initial = Random.Range(-9f, 9f);
+            initial = UnityEngine.Random.Range(-9f, 9f);
             if (initial - player.transform.position.x > 7 || initial - player.transform.position.x < -7) {
-                initial = Random.Range(-2f, 2f);
+                initial = UnityEngine.Random.Range(-2f, 2f);
                 initial = initial + player.transform.position.x;
             }
         }
@@ -49,11 +56,11 @@ public class SpawnPredator : MonoBehaviour
     }
 
     float GenerateYCoordinate() {
-        float initial = Random.Range(-5f, 5f);
+        float initial = UnityEngine.Random.Range(-5f, 5f);
         if (initial - player.transform.position.y > 0.75 ||  initial - player.transform.position.y < -0.75) {
-            initial = Random.Range(-5f, 5f);
+            initial = UnityEngine.Random.Range(-5f, 5f);
             if (initial - player.transform.position.y > 4 || initial - player.transform.position.y < -4) {
-                initial = Random.Range(-2f, 2f);
+                initial = UnityEngine.Random.Range(-2f, 2f);
                 initial = initial + player.transform.position.y;
             }
         }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -6955221582668231052}
   m_Layer: 0
   m_Name: Predator
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   predator: {fileID: 6237694072589080886}
   timer: 0
+  active: 0
 --- !u!61 &-6955221582668231052
 BoxCollider2D:
   m_ObjectHideFlags: 0

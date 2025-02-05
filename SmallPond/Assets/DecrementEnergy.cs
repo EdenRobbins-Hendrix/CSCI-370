@@ -26,6 +26,10 @@ public class DecrementEnergy : MonoBehaviour
 
         energyDisplay.SetText(getText());
         //Debug.Log("Decrementing Energy");
+        if (energy <= 0) {
+            GameOver gameOver = (GameOver)GetComponent("GameOver");
+            gameOver.EndGame();
+        }
     }
 
     public void Increment(){

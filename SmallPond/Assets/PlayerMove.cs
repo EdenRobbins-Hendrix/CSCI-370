@@ -10,14 +10,17 @@ public class PlayerMove : MonoBehaviour
     public DecrementEnergy decrementenergy;
     private float lastx;
     private float lasty;
+    public Boolean active;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        active = true;
         decrementenergy = GameObject.FindWithTag("GameController").GetComponent<DecrementEnergy>();
     }
     // Update is called once per frame
     void Update()
     {
+        if (active){
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
         mousePosition.z = 0;
@@ -31,7 +34,7 @@ public class PlayerMove : MonoBehaviour
         lastx = mousePosition.x;
 
         decrementenergy.Decrement(distance);
-        
+        }
         
 
     }

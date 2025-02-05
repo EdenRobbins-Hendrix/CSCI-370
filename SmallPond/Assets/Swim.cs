@@ -6,23 +6,25 @@ public class swim : MonoBehaviour
     public GameObject predator;
     public int timer;
     private bool recentlyMade;
+    public bool active;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        active = true;
         timer = 0;
         recentlyMade = true;
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {   if (active){
         timer++;
         if (timer > 500) {
             recentlyMade = false;
         }
         // if the rotation is 0, it should move from left to right, 90 moves top to bottom, 180 right to left, -90 from bottom to top
-        Move();
+        Move();}
     }
 
     void Move(){
@@ -37,6 +39,10 @@ public class swim : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision){
         GameObject otherObject = collision.gameObject;
         if (otherObject.name == "Player"){
+            if (active) {
+                GameOver gameOver = (GameOver)GameObject.FindWithTag("GameManager").GetComponent("GameOver");
+                gameOver.EndGame();
+            }
             //Debug.Log("Predator collided with: " + otherObject);
         }
         
@@ -44,6 +50,10 @@ public class swim : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider) {
 		GameObject otherObject = collider.gameObject;
 		if (otherObject.name == "Player"){
+            if (active) {
+                GameOver gameOver = (GameOver)GameObject.FindWithTag("GameManager").GetComponent("GameOver");
+                gameOver.EndGame();
+            }
             //Debug.Log("Predator triggered with: " + otherObject);
         }
     }
