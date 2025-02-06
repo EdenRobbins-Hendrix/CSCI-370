@@ -5,7 +5,7 @@ Intent: Be a bullet hell-esque game with an exhaustion mechanic \
 Narrative Structure: The tale of a small fish trying to survive by eating food and avoiding predators \
 \
 Mechanics: Energy decreases as you move, eating food increases your energy as well as score, you die if you run out of energy or collide with a predator \
-\ 
+\
 Aesthetics: Everything's fish themed! \
 \
 Joys: It was fun learning the basics of unity, and it's nice to have something that you can show other people that you yourself made. I also learned how to navigate the unity documentation. \
@@ -26,4 +26,4 @@ What Katie did: \
     Predator spawning \
     Predator collision \
     Energy functionality (incrementation when food is eaten and decrementation as the player moves) \
-    Aesthetic design \
+    Aesthetic design
