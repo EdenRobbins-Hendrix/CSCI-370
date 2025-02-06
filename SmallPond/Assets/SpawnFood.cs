@@ -9,7 +9,7 @@ public class SpawnFood : MonoBehaviour
     void Start()
     {
         active = true;
-        InvokeRepeating("Spawn", 1f, 8f);
+        InvokeRepeating("Spawn", 1f, 6f);
     }
 
     // Update is called once per frame
