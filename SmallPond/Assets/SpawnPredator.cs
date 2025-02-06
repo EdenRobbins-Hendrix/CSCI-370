@@ -69,25 +69,25 @@ public class SpawnPredator : MonoBehaviour
 
     // spawn predator in area just outside frame and move across camera area
     void SpawnA(){
-        Instantiate(predator, new Vector2(-12f, GenerateYCoordinate()),
+        Instantiate(predator, new Vector2(-11f, GenerateYCoordinate()),
          Quaternion.Euler(new Vector3(0, 0, 0)));
         //Debug.Log("Instantiating Predator A");
     }
 
     void SpawnB(){
-        Instantiate(predator, new Vector2(GenerateXCoordinate(), -10f),
+        Instantiate(predator, new Vector2(GenerateXCoordinate(), -7f),
          Quaternion.Euler(new Vector3(0, 0, 90)));
         //Debug.Log("Instantiating Predator B");
     }
 
     void SpawnC(){
-        Instantiate(predator, new Vector2(12f, GenerateYCoordinate()),
+        Instantiate(predator, new Vector2(11f, GenerateYCoordinate()),
          Quaternion.Euler(new Vector3(0, 0, 180)));
         //Debug.Log("Instantiating Predator C");
     }
 
     void SpawnD(){
-        Instantiate(predator, new Vector2(GenerateXCoordinate(), 10f),
+        Instantiate(predator, new Vector2(GenerateXCoordinate(), 7f),
          Quaternion.Euler(new Vector3(0, 0, 270)));
         //Debug.Log("Instantiating Predator D");
     }
