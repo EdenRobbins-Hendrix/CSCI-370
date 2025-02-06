@@ -12,7 +12,10 @@ Joys: It was fun learning the basics of unity, and it's nice to have something t
 \
 Struggles: It was a pain learning the basics of unity, and it's frustrating when you repeatedly fail to get different scripts to communicate with each other, delete a game object, or so such. Also, the documentation is very difficult to navigate. \
 \
-Attributions: \
+Attributions: "Pixel Cookie" by qubodup licensed CC0: https://opengameart.org/content/pixel-cookie \
+"Basic Fish and ParrotFish" by @RAPIDPUNCHES licensed CC-BY 4.0: https://opengameart.org/content/basic-fish-and-parrotfish \
+"Pike Fish" by Angrycheese licensed CC0: https://opengameart.org/content/pike-fish \
+"Underwater Fantasy" by Ansimuz licensed Standard Unity Asset Store EULA: https://assetstore.unity.com/packages/2d/textures-materials/water/underwater-fantasy-87457#publisher \
 \
 What Eden did: \
     Game concept and mechanic design \
