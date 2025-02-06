@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      32bit-fish-parrot1b_0: 1044658127471232724
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
