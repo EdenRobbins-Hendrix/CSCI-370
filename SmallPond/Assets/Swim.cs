@@ -36,8 +36,8 @@ public class swim : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collider) {
-		GameObject otherObject = collider.gameObject;
+    void OnCollisionEnter2D(Collision2D collision) {
+		GameObject otherObject = collision.gameObject;
 		if (otherObject.CompareTag("Player")){
                 GameOver gameOver = (GameOver)GameObject.FindWithTag("GameController").GetComponent("GameOver");
                 gameOver.EndGame();
