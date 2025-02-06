@@ -22,7 +22,7 @@ What Eden did: \
     Game over functionality \
     Score functionality \
     \
-What Katie did: \
+What Kate did: \
     Predator spawning \
     Predator collision \
     Energy functionality (incrementation when food is eaten and decrementation as the player moves) \
