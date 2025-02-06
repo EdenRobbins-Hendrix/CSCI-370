@@ -82,7 +82,7 @@ public class SpawnPredator : MonoBehaviour
 
     void SpawnC(){
         Instantiate(predator, new Vector2(11f, GenerateYCoordinate()),
-         Quaternion.Euler(new Vector3(0, 0, 180)));
+         Quaternion.Euler(new Vector3(180, 0, 180)));
         //Debug.Log("Instantiating Predator C");
     }
 

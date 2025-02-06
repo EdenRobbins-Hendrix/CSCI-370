@@ -32,7 +32,7 @@ public class swim : MonoBehaviour
             Destroy(predator);
         }
         else{
-            transform.Translate(new UnityEngine.Vector2(0.02f, 0));
+            transform.Translate(new UnityEngine.Vector2(0.04f, 0));
         }
     }
 
