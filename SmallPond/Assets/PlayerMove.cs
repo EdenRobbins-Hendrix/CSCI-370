@@ -35,6 +35,9 @@ public class PlayerMove : MonoBehaviour
 
         decrementenergy.Decrement(distance);
         }
+        else {
+            transform.position = new Vector3(lastx, lasty, 0);
+        }
         
 
     }

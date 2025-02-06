@@ -38,7 +38,7 @@ public class swim : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
         GameObject otherObject = collision.gameObject;
-        if (otherObject.name == "Player"){
+        if (otherObject.CompareTag("Player")){
             if (active) {
                 GameOver gameOver = (GameOver)GameObject.FindWithTag("GameManager").GetComponent("GameOver");
                 gameOver.EndGame();
@@ -49,7 +49,7 @@ public class swim : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collider) {
 		GameObject otherObject = collider.gameObject;
-		if (otherObject.name == "Player"){
+		if (otherObject.CompareTag("Player")){
             if (active) {
                 GameOver gameOver = (GameOver)GameObject.FindWithTag("GameManager").GetComponent("GameOver");
                 gameOver.EndGame();
