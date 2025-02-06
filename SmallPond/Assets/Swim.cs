@@ -41,7 +41,7 @@ public class swim : MonoBehaviour
 		if (otherObject.CompareTag("Player")){
                 GameOver gameOver = (GameOver)GameObject.FindWithTag("GameController").GetComponent("GameOver");
                 gameOver.EndGame();
-            //Debug.Log("Predator triggered with: " + otherObject);
+            Debug.Log("Predator triggered with: " + otherObject);
         }
     }
 

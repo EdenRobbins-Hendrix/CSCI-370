@@ -44,10 +44,10 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision){
         GameObject otherObject = collision.gameObject;
-        Debug.Log("Player collided with: " + otherObject);
+        //Debug.Log("Player collided with: " + otherObject);
     }
     void OnTriggerEnter2D(Collider2D collider) {
 		GameObject otherObject = collider.gameObject;
-		Debug.Log("Player triggered with: " + otherObject);
+		//Debug.Log("Player triggered with: " + otherObject);
     }
 }
