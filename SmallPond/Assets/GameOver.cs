@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 public class GameOver : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class GameOver : MonoBehaviour
         SpawnFood spawnFood = (SpawnFood)GetComponent("SpawnFood");
         spawnFood.active = false;
         PlayerMove playerMove = (PlayerMove)GameObject.FindWithTag("Player").GetComponent("PlayerMove");
+        AudioSource background = (AudioSource)GameObject.FindWithTag("Player").GetComponent("AudioSource");
+        background.mute = true;
         playerMove.active = false;
         Destroy(GameObject.FindWithTag("Player").GetComponent("CircleCollider2D"));
         }

@@ -9,7 +9,7 @@ public class swim : MonoBehaviour
     public bool active;
     private int frames;
     private bool triggered;
-
+    public AudioSource crunch;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -54,6 +54,7 @@ public class swim : MonoBehaviour
                 GameOver gameOver = (GameOver)GameObject.FindWithTag("GameController").GetComponent("GameOver");
                 gameOver.EndGame();
                 //Debug.Log("Predator triggered with: " + otherObject);
+                crunch.Play();
         }
     triggered = true;
     }
