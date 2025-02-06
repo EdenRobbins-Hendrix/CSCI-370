@@ -32,16 +32,17 @@ public class swim : MonoBehaviour
             Destroy(predator);
         }
         else{
-            transform.Translate(new UnityEngine.Vector2(0.008f, 0));
+            transform.Translate(new UnityEngine.Vector2(0.01f, 0));
         }
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
+        Debug.Log("Triggered");
 		GameObject otherObject = collider.gameObject;
-		if (otherObject.CompareTag("Player")){
+		if (otherObject.name == "Player"){
                 GameOver gameOver = (GameOver)GameObject.FindWithTag("GameController").GetComponent("GameOver");
                 gameOver.EndGame();
-            Debug.Log("Predator triggered with: " + otherObject);
+                Debug.Log("Predator triggered with: " + otherObject);
         }
     }
 
