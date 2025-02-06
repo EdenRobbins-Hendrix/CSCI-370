@@ -12,7 +12,7 @@ public class SpawnPredator : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
-        InvokeRepeating("Spawn", 0.5f, 0.55f);
+        InvokeRepeating("Spawn", 0.5f, 0.60f);
         active = true; 
     }
 

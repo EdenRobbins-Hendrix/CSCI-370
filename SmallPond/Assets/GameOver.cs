@@ -27,10 +27,7 @@ public class GameOver : MonoBehaviour
         spawnFood.active = false;
         PlayerMove playerMove = (PlayerMove)GameObject.FindWithTag("Player").GetComponent("PlayerMove");
         playerMove.active = false;
-        GameObject[] predators = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject predator in predators) {
-            swim swim = (swim)predator.GetComponent("Swim");
-            swim.active = false;
+        Destroy(GameObject.FindWithTag("Player").GetComponent("CircleCollider2D"));
         }
     }
-}
+
