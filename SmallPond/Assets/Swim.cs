@@ -26,7 +26,7 @@ public class swim : MonoBehaviour
             recentlyMade = false;
         }
         frames++;
-        if (frames % 6 == 0) { //If the remainder of the current frame divided by 10 is 0 run the function.
+        if (frames % 10 == 0) { //If the remainder of the current frame divided by 10 is 0 run the function.
             triggered = false;
     }
         // if the rotation is 0, it should move from left to right, 90 moves top to bottom, 180 right to left, -90 from bottom to top

@@ -29,6 +29,7 @@ What Eden did: \
     \
 What Kate did: \
     Predator spawning \
-    Predator collision \
+    Predator collision & triggers\
     Energy functionality (incrementation when food is eaten and decrementation as the player moves) \
-    Aesthetic design
+    Aesthetic design\
+    Game export and upload \
